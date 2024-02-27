@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css?ver=123">
+    </head>
+    <body>
+        <script src="combined.js?ver=123"></script>
+        <script>
+            document.body.addEventListener('touchstart', function(e) {
+                if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                }
+            }, {passive: false});
+        </script>
+    </body>
+</html>
